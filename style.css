@@ -1,0 +1,66 @@
+:root {
+  --vida-primaria:   #0B6E75;
+  --vida-secundaria: #2E9E7E;
+  --vida-destaque:   #E4572E;
+  --vida-fundo:      #F4F7F6;
+  --vida-texto:      #1F2A30;
+  --vida-borda:      #D6E2E0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 1rem;   line-height: 1.6;
+  color: var(--vida-texto);
+  background-color: var(--vida-fundo);
+}
+
+header {
+  background-color: var(--vida-primaria);
+  color: #FFFFFF;
+  padding: 24px 32px;
+}
+header h1 { margin: 0; font-size: 1.8rem; }
+nav ul {
+  display: flex;                 /* os itens do menu, lado a lado */
+  gap: 24px;
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+}
+nav a { 
+    color: #FFFFFF; text-decoration: none; font-weight: 600; 
+}
+
+.lista-especialidades {        /* o contêiner: decide o arranjo do conjunto */
+  display: flex;
+  flex-wrap: wrap;             /* deixa a fileira quebrar em tela estreita  */
+  gap: 20px;                   /* espaço entre os cards, sem margem        */
+  justify-content: center;     /* centraliza a fileira no eixo principal   */
+  list-style: none;   padding: 0;
+}
+.lista-especialidades li {     /* o item: decide a própria caixa           */
+  width: 260px;
+  padding: 20px;
+  background-color: #070707;
+  border-left: 4px solid var(--vida-secundaria);
+  border-radius: 8px;
+}
+
+table { width: 100%; border-collapse: collapse; background-color: #FFFFFF; }
+
+th {
+  background-color: var(--vida-primaria);
+  color: #FFFFFF;
+  text-align: left;
+  padding: 12px 16px;
+}
+
+td { padding: 12px 16px; border-bottom: 1px solid var(--vida-borda); }
+
+footer {
+  background-color: var(--vida-texto);
+  color: #FFFFFF;
+  padding: 24px 32px;
+  margin-top: 40px;
+}
