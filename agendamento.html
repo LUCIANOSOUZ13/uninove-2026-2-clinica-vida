@@ -6,6 +6,7 @@
     <title>clinica vida mais</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body> <!-- ADICIONADO: Abertura do body -->
 
 <form class="form-agendamento" action="/agendamento" method="post">
   <fieldset>
@@ -36,7 +37,8 @@
     </div>
   </fieldset>
 
-  <!---teste agendamento-->
+  <!-- CORRIGIDO: Comentário com a sintaxe certa -->
+  <!-- teste agendamento -->
 
    <fieldset>
     <legend>Dados da consulta</legend>
@@ -57,11 +59,11 @@
         </select>
       </div>
       <div class="campo">
-        <label for="data">23/11/2026</label>
+        <label for="data">Data da Consulta</label> <!-- DICA: Troquei o texto fixo por um label real -->
         <input type="date" id="data" name="data" min="2026-09-01" required>
       </div>
       <div class="campo">
-        <label for="horario">22:00</label>
+        <label for="horario">Horário</label> <!-- DICA: Troquei o texto fixo por um label real -->
         <input type="time" id="horario" name="horario" min="08:00" max="18:00" required>
       </div>
       <div class="campo campo-largo">
@@ -73,6 +75,9 @@
 
   <button type="submit">Agendar consulta</button>
 </form>
+
+</body> <!-- ADICIONADO: Fechamento do body -->
+</html> <!-- ADICIONADO: Fechamento do html -->
 
 .form-grid {                 /* base: o celular, uma coluna */
   display: grid;
