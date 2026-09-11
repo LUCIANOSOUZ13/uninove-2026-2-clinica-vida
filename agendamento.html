@@ -37,3 +37,60 @@
   </fieldset>
 
   <!---teste agendamento-->
+
+   <fieldset>
+    <legend>Dados da consulta</legend>
+    <div class="form-grid">
+      <div class="campo">
+        <label for="especialidade">Especialidade</label>
+        <select id="especialidade" name="especialidade" required>
+          <option value="">Selecione</option>
+          <option value="cardiologia">Cardiologia</option>
+          <option value="pediatria">Pediatria</option>
+          <option value="ortopedia">Ortopedia</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="medico">Médico</label>
+        <select id="medico" name="medico" required>
+          <option value="">Selecione</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="data">23/11/2026</label>
+        <input type="date" id="data" name="data" min="2026-09-01" required>
+      </div>
+      <div class="campo">
+        <label for="horario">22:00</label>
+        <input type="time" id="horario" name="horario" min="08:00" max="18:00" required>
+      </div>
+      <div class="campo campo-largo">
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes" name="observacoes" rows="3" maxlength="300"></textarea>
+      </div>
+    </div>
+  </fieldset>
+
+  <button type="submit">Agendar consulta</button>
+</form>
+
+.form-grid {                 /* base: o celular, uma coluna */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 24px;
+}
+
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo-largo { grid-column: 1 / -1; }   /* ocupa a linha inteira */
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus { outline: 3px solid #C84B31; }
+
+@media (min-width: 640px) {
+  .form-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .form-grid { grid-template-columns: repeat(3, 1fr); }
+}
