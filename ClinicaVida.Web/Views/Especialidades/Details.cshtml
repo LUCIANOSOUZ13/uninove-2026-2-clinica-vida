@@ -1,0 +1,8 @@
+@model Especialidade
+@{
+ViewData["Title"] = "Detalhes da especialidade";
+}
+<h1>@Model.Nome</h1>
+<p>@Model.Descricao</p>
+<p><a href="/Medicos?especialidadeId=@Model.Id">Ver médicos desta especialidade</a></p>
+<p><a href="/Especialidades">Voltar para a lista</a></p>
